@@ -13,17 +13,17 @@ Frontend Repo Link: [Pull Request](https://github.com/zainsadaqat/hello-react-fr
 ### copy
 
 ```
-git@github.com:zainsadaqat/hello-rails-backend.git
+git@github.com:zainsadaqat/hello-rails-back-end.git
 ```
 
 ####
 
 ```
-git clone git@github.com:zainsadaqat/hello-rails-backend.git
+git clone git@github.com:zainsadaqat/hello-rails-back-end.git
 ```
 
 ```
-cd hello-rails-backend
+cd hello-rails-back-end
 ```
 
 ```

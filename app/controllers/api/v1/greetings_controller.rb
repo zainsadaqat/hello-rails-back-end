@@ -2,15 +2,14 @@ module Api
   module V1
     class GreetingsController < ApplicationController
       def index
-        @greetings = Greeting.all 
+        @greetings = Greeting.all
         render json: @greetings
-      end 
+      end
 
       def show
-          @greeting = Greeting.find(params[:id])
-          render json: @greeting
-      end 
-
+        @greeting = Greeting.find(params[:id])
+        render json: @greeting
+      end
     end
   end
 end
