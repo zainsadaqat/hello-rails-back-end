@@ -2,6 +2,8 @@
 
 # Hello Rails Backend
 
+Frontend Repo Link: [Pull Request](https://github.com/zainsadaqat/hello-react-front-end/pull/2)
+
 ## Built With
 
 - Ruby on Rails
