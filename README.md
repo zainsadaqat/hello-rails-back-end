@@ -1,3 +1,163 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
+# Hello Rails Backend
+
+Frontend Repo Link: [Pull Request](https://github.com/zainsadaqat/hello-react-front-end/pull/2)
+
+## Built With
+
+- Ruby on Rails
+
+## Getting Started
+
+### copy
+
+```
+git@github.com:zainsadaqat/hello-rails-back-end.git
+```
+
+####
+
+```
+git clone git@github.com:zainsadaqat/hello-rails-back-end.git
+```
+
+```
+cd hello-rails-back-end
+```
+
+```
+bundle install
+```
+
+```
+rails s
+```
+
+## Authors
+
+👤 **Zain Sadaqat**
+
+- GitHub: [@githubhandle](https://github.com/githubhandle)
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+## Steps to create an API in Rails
+
+1. Create a new Rails API
+
+```
+rails new hello-world-back-end --api --database=postgresql
+```
+
+2. Enable CORS(Cross Origin Resource Sharing)
+   1. Go to config -> initializers -> cors.rb
+
+```
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins '*'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+```
+
+3. Go to GemFile and un-comment
+
+```
+gem 'rack-cors'
+```
+
+4. Create model, controller, database migration table and route via rails g resource command
+
+```
+rails g resource Greeting
+```
+
+5. Specify attributes and datatypes of a secret menu item
+
+```
+class Greeting < ActiveRecord::Migration[6.0]
+  def change
+    create_table :greetings do |t|
+      t.text :message
+    end
+  end
+end
+```
+
+rails db:migrate
+
+6. Define index, show, create, update, and destroy actions
+
+```
+module Api
+  module V1
+    class GreetingsController < ApplicationController
+      def index
+        @greetings = Greeting.all
+        render json: @greetings
+      end
+
+      def show
+          @greeting = Greeting.find(params[:id])
+          render json: @greeting
+      end
+
+    end
+  end
+end
+```
+
+7. Create routes for index, show, create, update, and destroy actions
+
+```
+Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+  resources :greetings, only: [:index, :show, :create, :update, :destroy]
+    end
+  end
+end
+```
+
+8. Seed data
+
+```
+greeting1 = Greeting.create(message: "Hello from the other side 1")
+greeting2 = Greeting.create(message: "Hello from the other side 2")
+greeting3 = Greeting.create(message: "Hello from the other side 3")
+greeting4 = Greeting.create(message: "Hello from the other side 4")
+greeting5 = Greeting.create(message: "Hello from the other side 5")
+```
+
+9. Fire up your server & postman to test API functionality
+
+Credit:- [Lisa's Article on dev.to](https://dev.to/lisahjung/beginner-s-guide-to-creating-an-api-from-scratch-using-rails-2eie)
+
+## Other useful commands
+
+Generate Model
+
+```
+rails generate User name username email
+```
+
+Generate Resource
+
+```
+rails generate resource Greeting message:text
+```
+
+Generate Scaffold
+
+```
+rails generate scaffold User name username email
+```
+
 Rubocop
 
 ```
@@ -10,27 +170,20 @@ Stylelinter
 npx stylelint "**/*.{css,scss}"
 ```
 
-# README
+## 🤝 Contributing
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Contributions, issues, and feature requests are welcome!
 
-Things you may want to cover:
+Feel free to check the [issues page](../../issues/).
 
-- Ruby version
+## Show your support
 
-- System dependencies
+Give a ⭐️ if you like this project!
 
-- Configuration
+## Acknowledgments
 
-- Database creation
+- Original design idea by Gregoire Vella on Behance.
 
-- Database initialization
+## 📝 License
 
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+This project is [MIT](./MIT.md) licensed.
