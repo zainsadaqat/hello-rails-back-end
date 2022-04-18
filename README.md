@@ -6,7 +6,8 @@ Frontend Repo Link: [Hello Rails Frontend](https://github.com/zainsadaqat/hello-
 
 ## Built With
 
-- Ruby on Rails
+- Ruby on Rails API
+- PostgreSQL
    - Gems
       - devise
       - devise-jwt
