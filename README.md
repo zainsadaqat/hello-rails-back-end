@@ -38,9 +38,9 @@ rails s
 
 👤 **Zain Sadaqat**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@zainsadaqat](https://github.com/githubhandle)
+- Twitter: [@zain_sadaqat](https://twitter.com/twitterhandle)
+- LinkedIn: [zain-sadaqat](https://linkedin.com/in/linkedinhandle)
 
 ## Steps to create an API in Rails
 
