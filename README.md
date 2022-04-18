@@ -2,7 +2,7 @@
 
 # Hello Rails Backend
 
-Frontend Repo Link: [Pull Request](https://github.com/zainsadaqat/hello-react-front-end/pull/2)
+Frontend Repo Link: [Hello Rails Frontend](https://github.com/zainsadaqat/hello-react-front-end/pull/2)
 
 ## Built With
 
